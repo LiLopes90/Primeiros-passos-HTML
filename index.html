@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo do curso de HTML</title>
+    <style>
+        .row {
+            margin:5px;
+        }
+        label{
+            width: 100px;
+            text-align: right;
+            display: inline-block;
+            padding-right: 5px;
+        }
+        fieldset {
+            margin: 15px 0;
+            border-radius: 10px;
+            border-color: blue;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 5;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <h1>Atividade 1 do curso de HTML</h1>
+    <h2 id="indice">Indice</h2>
+    <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#preparacao">Preparando o ambiente</a></li>
+        <li><a href="#liveserver">O que é o Live server?</a></li>
+        <li><a href="#estrutura">Estrutura básica do HTML</a></li>
+        <li><a href="#lista">Criação de Lista</a></li>
+        <li><a href="#formulario">Criação de Formulários</a></li>
+        <li><a href="#html5">Um pouco sobre HTML5</a></li>
+    </ul>
+    <hr>
+
+    <h3 id="introducao">Introdução</h3>
+    <small><a href="#indice">(Voltar)</a></small>
+    <p>Para iniciarmos a construção de um site será necessário conhecer como funciona a estruturação do site. Quais ferramentas são utilizadas e comandos básicos para iniciar o desenvolvimento.</p><br>
+   
+    <h4 id="preparacao">Preparando o ambiente</h4>
+    <small><a href="#indice">(Voltar)</a></small>
+
+    <p>Para auxiliar nesse processo é recomendado utilizar o programa <b>Visual Studio Code</b>. É um programa gratuito e com diversos recursos.</p><br>
+    <p><strong>Link para download <a href="https://code.visualstudio.com/download"> https://code.visualstudio.com/download</a></strong></p>
+    <p>Após instalar, acesse a opção de extensões e instale a extensão <mark>Live Server.</mark></p><br>
+
+    <h5 id="liveserver">O que é o Live server?</h5>
+    <small><a href="#indice">(Voltar)</a></small>
+    <p>Extensão utilizada para você conseguir visualizar a página criada em tempo real. Ela atualizada automaticamente quando você salva as alterações realizadas no Visual Studio Code.</p>
+    <hr>
+
+    <h4 id="estrutura">Estrutura básica do HTML</h4>
+    <small><a href="#indice">(Voltar)</a></small>
+    <p>Ao desenvolver um site é importante entender como uma página é estruturada.</p>
+    <p>Ela é divida em:</p>
+    <p><b>Cabeçalho (header) - </b>grande faixa na parte superior onde fica o título, logotipo.</p>
+    <p><b>Barra de navegação - </b>Onde geralmente é criado o menu do site com links e guias.</p>
+    <p><b>Conteúdo principal (main) - </b> Onde fica a maior parte do conteúdo do site.</p>
+    <p><b>Barra lateral (sidebar) - </b> Informações como links, anúncios. Artigos relacionados.</p>
+    <p><b>Rodapé (footer) - </b> Faixa inferior da página onde fica os avisos, direitos autorais ou informações de contato.</p>
+    <p>Para implementar essa marcação semântica, o HTML fornece tags dedicadas que você pode usar para representar essas seções, por exemplo:</p>
+
+    <mark><i>cabeçalho:&lt;header&gt;.
+    barra de navegação: &lt;nav&gt;.
+    conteúdo principal: &lt;main&gt;, com várias subseções de conteúdo representadas por &lt;article&gt;, &lt;section&gt;, e elementos &lt;div&gt;.
+    rodapé: &lt;footer&gt;.</i></mark>
+
+    <hr>
+    <h4 id="lista"> Criação de Lista</h4>
+    <small><a href="#indice" target="_self">(Voltar)</a></small>
+    <p>No HTML podemos criar a lista ordenada e a não ordenada.</p>
+    <h5>Lista Ordenada</h5>
+    <p><u>É uma lista numerada</u></p>
+    <img src="ordenada.png" alt="Código de lista ordenada" />
+    <ol>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Açucar</li>
+        <li>Café</li>
+    </ol>
+    <h5>Lista Não Ordenada</h5>
+    <p><u>São organizadas por marcadores</u></p>
+    <img src="nao_ordenada.png" alt="Código de lista não ordenada" />
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Açucar</li>
+        <li>Café</li>
+    </ul>
+    <p>Nas duas listas é possível criar uma lista dentro da outra</p>
+    <img src="lista_dentro_de_outra.png" alt="Código de uma lista dentro de outra" />
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Açucar</li>
+        <li>Proteína</li>
+        <ol>
+        <li>Frango</li>
+        <li>Carne Vermelha</li>
+        <li>Peixes</li>
+        </ol>
+     
+    </ul>
+   <hr>     
+<h4 id="formulario">Criação de Formulários</h4>
+<small><a href="#indice">(Voltar)</a></small>
+<p>Na construção de um formulário existe alguns paramentros importantes dentro da tag &lt;form&gt;.</p>
+<p><b>Name</b> - Nome da instância para se usado no Javascript.</p>
+<p><b>Action</b> - Local onde informamos o endereço do servidor para envio dos dados preenchidos no formulário.</p>
+<p><b>Method </b> - <i>POST</i>: Não envia os dados ela URL, envia via body por por meio de uma requisição. Também existe o <i><b>GET</b></i>. Essa é uma opção não segura, pois envia os dados pela URL ficando visível.</p>
+<p><b>Target</b> = blank - Faz com que ao apertar no botão enviar, o navegador abra uma outra aba mantendo o formulário na outra aba.</p>
+<p><b>Autocomplete</b> - OFF: Após enviar os dados ele apaga os campos quando clicar em voltar no navegador. <b>ON:</b> No on, se clicar em voltar ele mantém os campos preenchidos, só apaga o campo senha. É um recurso do navegador.</p>
+<p><b>Onsubmit</b> - Evento do Javascript - Muito usado para validar o formulário.</p>
+<p>Existem outros parametros importantes para se estudar. Recomendado consultar o site <a href="https://www.w3schools.com/"target="_blank"><i>https://www.w3schools.com/</i></a></p>
+
+<p>Exemplo de formulário</p>
+<img src="formulario.png" alt="Código de formulário" />
+
+<form name="cadastro" method="get" action="#">
+    <fieldset>
+        <legend>Insira os dados</legend>
+        <div class="row">
+    Nome: <input type="text" name="name" /><br>
+    Idade: <input type="number" name="age" /><br>
+    Email: <input type="email" name="email" /><br>
+    <button type="submit">Enviar</button>
+    </div>
+    </fieldset>
+</form>
+
+<h5>Checkbox e Radio Button</h5>
+<h6>Checkbox</h6>
+<p>Com o checkbox você pode criar caixas de perguntas que podem ser selecionado multiplos valores. É criado uma variável com mais de um valor e envia todos os itens juntos para o servidor.</p>
+<p>Para o servidor receber todos os dados juntos, criar uma variável no seguinte formato: <strong>name="opcional[]"</strong>. O servidor recebe da seguinte forma<strong> [“queijo”, “cebola”]</strong></p>
+<img src="checkbox.png" alt="Código de checkbox" />
+
+<form onsubmit="" method="post">
+    <fieldset>
+        <div class="row">
+    <h6>Quais opções deseja?</h6>
+    <input type="checkbox" name="opcional[]" value="hamburger"> + Hamburger <br>
+    <input type="checkbox" name="opcional[]" value="batata"> + Batata Frita <br>
+    <input type="checkbox" name="opcional[]" value="refrigerante"> + Refrigerante <br>
+    <input type="checkbox" name="opcional[]" value="suco"> + Suco <br>
+    <button type="submit">Enviar</button>
+    </div> 
+    </fieldset>
+</form>
+
+<h6>Radio Button</h6>
+<p>No radio button só é possível selecionar uma das opções</p>
+<img src="radio.png" alt="Código de radio button" />
+<form onsubmit="" method="post">
+    <fieldset>
+        <div class="row">
+    <h6>Escolha uma das opções</h6>
+    <input type="radio" name="suco" value="laranja"> + Laranja <br>
+    <input type="radio" name="suco" value="abacaxi"> + Abacaxi <br>
+    <input type="radio" name="suco" value="limao"> + Limão <br>
+    <input type="radio" name="suco" value="morango"> + Morango <br>
+    <button type="submit">Enviar</button>
+    </div> 
+    </fieldset>
+</form>
+<hr>
+<h4 id="html5">Um pouco sobre HTML5</h4>
+<small><a href="#indice">(Voltar)</a></small>
+<p>Conforme é citado no portal Dev Mídia:</p>
+<blockquote cite="https://www.devmedia.com.br/as-novidades-do-html5/23992">Surgido a partir de um consórcio entre a <abbr>W3C</abbr> (World Wide Web Consortium) e a <abbr>WHATWG</abbr> (Web Hypertext Application Technology Working Group), o HTML5 será o novo padrão para a estruturação e apresentação de conteúdo na Word Wide Web trazendo melhorias significativas com novas funcionalidades de semântica e acessibilidade, além de melhorar o suporte aos mais recentes conteúdo multimídias.
+As principais mudanças que a nova versão proporcionará aos usuários são: Melhor tratamento de exceção, mais tags para substituir scripts, independência de plataforma e redução da necessidade de plugins externos.</blockquote>
+<p>Com a evolução do HTML para o HTML5, algumas Tags estão deixando de serem utilizadas. A ideia é para que o HTML seja mais estrutural e o CSS fique com a formação.</p>
+<p>Algumas tags que não mais utilizadas no HTML: Font, bgcolor, center, big.</p>
+<p>No link <a href="https://www.w3.org/TR/html5-diff/" target="_blank" >https://www.w3.org/TR/html5-diff/</a> é possível entender com mais detalhes as novas mudanças.</p>
+
+
+</body>
+</html>
